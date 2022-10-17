@@ -1,0 +1,40 @@
+@import 'variables';
+
+.svg_button_animated {
+        
+    background: none;
+    padding: 0.5rem 3rem;
+    width: max-content;
+    
+    margin-block: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 1;
+
+    // overflow: hidden;
+
+    height: 50px;
+
+    span {
+        color: $clr-neutral-100;
+    }
+
+    svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        z-index: -1;
+
+        .button_path{
+            fill: $clr-primary-400; 
+            stroke: $clr-neutral-100;
+        }
+    }
+}
