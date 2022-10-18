@@ -13,6 +13,7 @@ import Faq from '../components/faq/faq'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Reviews from '../components/reviews/reviews'
 
 const Spline = dynamic(() => import('@splinetool/react-spline'), {
   ssr: false,
@@ -72,7 +73,7 @@ export default function Home() {
                     <div className={`${styles.char}`}>r</div>
                   </h1>
 
-                  <p className={`${styles.text_neutral_900}`}>
+                  <p className={`${styles.text_neutral_100}`}>
                     Kittysitter es el primer servicio profesional de cuidado exclusivo de gatitos a 
                     domicilio en Rosario. Somos un equipo de personas altamente responsables, 
                     detallistas y comprometidas.
@@ -159,21 +160,26 @@ export default function Home() {
 
         </section>
 
+        <section className={`${styles.section_basic}`}>
+            <div className={`${styles.main_container}`}> 
+              <h1 className={`${styles.section_title} ${styles.text_center}`}>Loren ipsum</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget arcu dictum varius duis at consectetur lorem. Eget felis eget nunc lobortis mattis aliquam faucibus. Ut enim blandit volutpat maecenas volutpat. Ultrices dui sapien eget mi proin sed libero enim. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Pulvinar pellentesque habitant morbi tristique senectus. Sodales ut eu sem integer vitae justo. Feugiat in ante metus dictum at tempor commodo. Neque egestas congue quisque egestas diam in arcu. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Sodales neque sodales ut etiam sit amet nisl purus in. Vitae congue eu consequat ac felis.</p>
+        
+            </div>
+        </section>
+        <section className={`${styles.section_basic}`}>
+            <div className={`${styles.main_container}`}> 
+            <h1 className={`${styles.section_title} ${styles.text_center}`}>Reseñas</h1>
+                <Reviews/>
+            </div>
+        </section>
+
 
         {/* GOOGLE REVIEWS */}
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        Footer
       </footer>
     </div>
   )

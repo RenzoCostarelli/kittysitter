@@ -156,12 +156,12 @@
     // height: 100vh;
     padding-block: 2rem;
 
-
-    &.ltr{
-        h1{
-            translate: 0rem 5rem;
-        }
+    .section_title{
+        font-size: 5.5vw;
+        font-weight: bold;
+        color: $clr-primary-400;
     }
+
 }
 
 .canvas_container{

@@ -31,7 +31,8 @@ $fs-italic: italic;
 $clr-primary-100: hsl(18deg 63% 83%);
 $clr-primary-400: hsl(0, 59%, 78%); // color de la marca
 
-$clr-accent-100: purple;
+
+$clr-accent-100: #A6E8E8;
 $clr-accent-400: orange;
 
 $clr-neutral-100: white; //  neutral mas claro
@@ -59,6 +60,7 @@ $clr-neutral-900: #323232; //  neutral mas oscuro
 .text_neutral_900 {
     color: $clr-neutral-900;
 }
+
 
 .bg_primary_400 {
     background-color: $clr-primary-400;
@@ -95,6 +97,11 @@ $clr-neutral-900: #323232; //  neutral mas oscuro
 .pb_4{
     padding-block: 4rem;
 }
+
+.text_center {
+    text-align: center;
+}
+
 
 // .center_vertical {
 //     align-items: center;
