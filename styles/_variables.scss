@@ -1,7 +1,7 @@
 // FONTS
 
 $ff-primary: 'Poppins', sans-serif;
-$ff-fancy: 'Dancing Script', cursive;
+$ff-fancy: 'Noto Serif Telugu', serif;
 
 $ff-body: $ff-primary;
 $ff-heading: $ff-primary;
@@ -94,13 +94,18 @@ $clr-neutral-900: #323232; //  neutral mas oscuro
     flex: 1 1 0px
 }
 
-.pb_4{
-    padding-block: 4rem;
+.flex_align_center {
+    display: flex;
+    align-items: center;
 }
 
-.text_center {
-    text-align: center;
-}
+.pb_4{ padding-block: 4rem; }
+
+.vh_100 { min-height: 100vh;}
+
+.text_center { text-align: center; }
+
+.pos_relative { position: relative; }
 
 
 // .center_vertical {

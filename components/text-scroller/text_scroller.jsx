@@ -23,11 +23,12 @@ export default function TextScroller() {
     }, [])
 
     return (
-        <div className={`${stylesTextScroller.wrapper_overflow_hidden}`} >
+        <div className={`${stylesTextScroller.wrapper_overflow_hidden} ${stylesTextScroller.line} `} >
         <div className={`${stylesTextScroller.big_text}`} ref={el => {bigTextRef = el}}>
-          <span >purr</span><span className={`${stylesTextScroller.fancy_text}`}>miau</span><span className={`${stylesTextScroller.fw_thin}`}>purrr</span><span className={`${stylesTextScroller.fancy_text}`}>meow</span>
+          <span className={`${stylesTextScroller.fw_thin}`}>purr</span><span className={`${stylesTextScroller.fancy_text} ${stylesTextScroller.fs_italic}`}>miau</span><span className={`${stylesTextScroller.fw_thin}`}>purrr</span><span className={`${stylesTextScroller.fancy_text}`}>meow</span>
           <span className={`${stylesTextScroller.fs_italic}`}>meow</span><span className={`${stylesTextScroller.fancy_text}`}>miau</span><span className={`${stylesTextScroller.fs_italic}`}>purrr</span><span className={`${stylesTextScroller.fancy_text}`}>meow</span>
         </div>
       </div>
     );
+    
 }

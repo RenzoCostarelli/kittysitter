@@ -20,32 +20,29 @@ export default function GalleryScroller() {
           src: `/images/gallery/3.jpg`,
         },
         {
-          src: `/images/gallery/1.jpg`,
+          src: `/images/gallery/4.jpg`,
         },
         {
-          src: `/images/gallery/2.jpg`,
+          src: `/images/gallery/5.jpg`,
         },
         {
-          src: `/images/gallery/3.jpg`,
+          src: `/images/gallery/6.jpg`,
         },
         {
-          src: `/images/gallery/1.jpg`,
+          src: `/images/gallery/7.jpg`,
         },
         {
-          src: `/images/gallery/2.jpg`,
+          src: `/images/gallery/8.jpg`,
         },
         {
-          src: `/images/gallery/3.jpg`,
+          src: `/images/gallery/9.jpg`,
         },
         {
-          src: `/images/gallery/1.jpg`,
+          src: `/images/gallery/10.jpg`,
         },
         {
-          src: `/images/gallery/2.jpg`,
-        },
-        {
-          src: `/images/gallery/3.jpg`,
-        },
+          src: `/images/gallery/12.jpg`,
+        }
     ];
     
     let bigTextRef = useRef(null);
