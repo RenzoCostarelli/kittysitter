@@ -41,7 +41,7 @@ export default function Reviews() {
                         <h3 className={`${reviewStyles.title}`}>{name}</h3>
                     </div>
                     <div className={`${reviewStyles.card_body}`}>
-                        <RankingStars stars="5"/>
+                        <RankingStars stars={stars}/>
  
                         <p>{review}</p>
                     </div>
