@@ -239,7 +239,7 @@
             height: var(--height);
     
             background-color: $clr-primary-400;
-            top: calc(70% + var(--height));
+            top: calc(50% + var(--height));
             left: 0;
             right: 0;
             z-index: -1;
@@ -403,7 +403,7 @@
         font-weight: bold;
         z-index: 2;
         width: fit-content;
-
+        line-height: 1.2;
         color: $clr-primary-400;
     }
 

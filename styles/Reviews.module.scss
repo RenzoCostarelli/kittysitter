@@ -5,13 +5,37 @@
     display: flex;
     gap: 1rem;
 
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
-    .card{
-        height: 400px;
-        width: 350px;
+    // margin-bottom: 15rem;
 
-        background-color: gray;
+    .card{
+        
+        background-color: white;
+        flex-basis: 350px;
+        border-radius: 1rem;
+        padding: 2rem 1rem;
+        
+        .card_header{
+            .title{
+                text-align: center;
+                font-weight: 400;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+        .card_body{
+            padding: 1rem;
+        }
+    }
+}
+
+.stars_container{
+    display: flex;
+
+    .star{
+        color: orange;
+        font-size: 1.2rem;
     }
 }

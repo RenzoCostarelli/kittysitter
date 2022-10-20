@@ -15,9 +15,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Reviews from '../components/reviews/reviews'
 
-const Spline = React.lazy(() => import('@splinetool/react-spline'), {
-  ssr: false,
-})
+const Spline = React.lazy(() => import('@splinetool/react-spline'))
 
 
 export default function Home() {
@@ -40,7 +38,10 @@ export default function Home() {
             y: 0,
             stagger: 0.05,
             delay: 0.2,
-            duration: .1
+            duration: .1,
+            onComplete(){
+              console.log('iuju');
+            }
           }, titleRef);
 
   }, [])
@@ -59,8 +60,6 @@ export default function Home() {
         <div className={styles.shadow}></div>
         <div className={`${styles.hero_container} ${styles.bg_primary_400}`}>
             <div className={styles.main_container}>
-
-             
 
                 <div className={styles.hero_box}>
                   <h1 className={`${styles.title} ${styles.text_neutral_900}`} ref={el => {titleRef = el}}>
@@ -94,7 +93,6 @@ export default function Home() {
         <div className={styles.canvas_container}>
           <Suspense fallback={<div>Loading...</div>}>
             <Spline scene="https://prod.spline.design/WH9m24EWCe3v3Il2/scene.splinecode" onLoad={onSplineLoad}/>
-
           </Suspense>
         </div>
 
@@ -178,11 +176,11 @@ export default function Home() {
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
             </svg>
           </div>
-            <div className={`${styles.main_container}`}> 
+            {/* <div className={`${styles.main_container}`}> 
               <h1 className={`${styles.text_neutral_900} ${styles.section_title} ${styles.text_center}  `}>Lorem ipsum</h1>
               <p className={`${styles.text_neutral_100}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget arcu dictum varius duis at consectetur lorem. Eget felis eget nunc lobortis mattis aliquam faucibus. Ut enim blandit volutpat maecenas volutpat. Ultrices dui sapien eget mi proin sed libero enim. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Pulvinar pellentesque habitant morbi tristique senectus. Sodales ut eu sem integer vitae justo. Feugiat in ante metus dictum at tempor commodo. Neque egestas congue quisque egestas diam in arcu. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Sodales neque sodales ut etiam sit amet nisl purus in. Vitae congue eu consequat ac felis.</p>
         
-            </div>
+            </div> */}
         </section>
         <section className={` ${styles.section_basic} ${styles.bg_primary_400}`}>
             <div className={`${styles.main_container}`}> 
