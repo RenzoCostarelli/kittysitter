@@ -4,12 +4,12 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 import styles from '../styles/Home.module.scss'
+import BtnStyles from '../styles/Buttons.module.scss'
 
 import Navbar from '../components/navbar/navbar'
-import SvgButton from '../components/svg-button/svgbutton'
 import TextScroller from '../components/text-scroller/text_scroller'
 import GalleryScroller from '../components/gallery-scroller/gallery_scroller'
-import Faq from '../components/faq/faq'
+import MainCtaButton from '../components/main-cta-button/mainCtaButton'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -29,7 +29,7 @@ export default function Home() {
 
 
   function onSplineLoad(splineApp){
-    console.log('cargado')
+    // console.log('cargado')
   }
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function Home() {
             delay: 0.2,
             duration: .1,
             onComplete(){
-              console.log('iuju');
+              // console.log('iuju');
             }
           }, titleRef);
 
@@ -85,6 +85,11 @@ export default function Home() {
 
                   {/* <SvgButton /> */}
 
+                  <MainCtaButton 
+                    text={'Reservar visita'}
+                    href={'#'}
+                  />
+
          
 
               </div>
@@ -113,7 +118,7 @@ export default function Home() {
 
       </header>
       <main className={styles.main}>
-        <section className={`${styles.section_basic} `}>
+        <section className={`${styles.section_basic} ${styles.pb_2}`}>
           <div className={`${styles.main_container}`}>
             
             <div className={styles.wrapper}>
@@ -168,39 +173,67 @@ export default function Home() {
             <GalleryScroller />
             <TextScroller />
 
+          <div className={`${styles.top_divider}`}>
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+              </svg>
+          </div>
         </section>
 
-        <section className={`${styles.section_basic} ${styles.bg_primary_400}`}>
-          <div className={`${styles.top_divider}`}>
-            <svg data-name="Layer_separator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-            </svg>
-          </div>
-            {/* <div className={`${styles.main_container}`}> 
-              <h1 className={`${styles.text_neutral_900} ${styles.section_title} ${styles.text_center}  `}>Lorem ipsum</h1>
-              <p className={`${styles.text_neutral_100}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget arcu dictum varius duis at consectetur lorem. Eget felis eget nunc lobortis mattis aliquam faucibus. Ut enim blandit volutpat maecenas volutpat. Ultrices dui sapien eget mi proin sed libero enim. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Pulvinar pellentesque habitant morbi tristique senectus. Sodales ut eu sem integer vitae justo. Feugiat in ante metus dictum at tempor commodo. Neque egestas congue quisque egestas diam in arcu. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Sodales neque sodales ut etiam sit amet nisl purus in. Vitae congue eu consequat ac felis.</p>
-        
-            </div> */}
-        </section>
-        <section className={` ${styles.section_basic} ${styles.bg_primary_400}`}>
-            <div className={`${styles.main_container}`}> 
-            <h1 className={`${styles.section_title} ${styles.text_center} ${styles.text_neutral_900}`}>Reseñas</h1>
+
+        <section className={`${styles.section_basic} ${styles.linear_gradient_background} ${styles.vh_100} ${styles.pb_6} ${styles.flex_align_center}`}>
+            <div className={`${styles.main_container} ${styles.z_index_0}`}> 
+                <div className={`${styles.pattern_reviews_section_container} ${styles.pattern_decoration_white_dots}`}></div> 
+                <div className={`${styles.pattern_container_bottom_right} ${styles.pattern_decoration_white_dots}`}></div> 
+            
+            
+                <h1 className={`${styles.section_title} ${styles.text_center} ${styles.text_neutral_900}`}>Reseñas</h1>
                 <Reviews/>
+                <div className={`${styles.button_container} ${styles.center_h}`}>
+                  <a href="https://www.google.com/search?q=kitty+sitter&rlz=1C1UEAD_esAR980AR980&oq=kitty+sitter&aqs=chrome.0.69i59l2j0i512j0i22i30j0i22i30i457j69i60l2j69i61.1862j0j7&sourceid=chrome&ie=UTF-8#lrd=0x95b7ad7b2ccae8c7:0xa880c6f294a764a9,1,,," className={`${BtnStyles.main_cta_offset}`} target='_blank'>Todas las reseñas</a>
+               
+
+                </div>
+
             </div>
 
-            <div className={styles.custom_divider_top}>
+
+        </section>
+        <section className={`${styles.section_basic} `}>
+            <div className={`${styles.custom_divider_waves_opacity}`}>
               <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+                  <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
               </svg>
             </div>
         </section>
 
-
-        {/* GOOGLE REVIEWS */}
       </main>
 
       <footer className={styles.footer}>
-        Footer
+        <div className={`${styles.wrapper} ${styles.flex_column}`}>
+          <div className={`${styles.logo_footer}`}>
+              <Image src="/images/kittysitter_logo_nav.png" width={726} height={243} />
+
+          </div>
+          <div className={`${styles.social_links} ${styles.gap_1}`}>
+            <div className="icon">Facebook</div>
+            <div className="icon">Instagram</div>
+            <div className="icon">Wsp</div>
+
+          </div>
+            <div className="footer_cta_container">
+
+            </div>
+            <div className="footer_bottom_section">
+
+            </div>
+        </div>
+        {/* LOGO */}
+        {/* REDES */}
+        {/* CTA FORM */}
+        {/* CTA DOC */}
+        {/* LINK A MI WEB */}
+
       </footer>
     </div>
   )

@@ -1,5 +1,5 @@
 import reviewStyles from '../../styles/Reviews.module.scss'
-
+import Image from 'next/image'
 import RankingStars from '../ranking/ranking'
 
 
@@ -11,23 +11,23 @@ export default function Reviews() {
     const reviewsList = [
         {
             id: 1,
-            img: '',
-            name: 'Erika Chaloupka',
-            review: 'Excelente servicio, hace 3 años que las elijo para cuidar a mi gatito y siempre quedo re contenta y Andy😻 tmb! Durante los días que quedan a cargo respetan los tiempos y el humor de los michis y estan muy atentas a sus necesidades y los cuidan perfecto, al llegar al domicilio envían ubicación, fotitos y los videos que hacen que te quedes súper tranquila. La responsabilidad y el amor que ponen en el cuidado se notan y son claves. Plus te cuidan las plantitas. Gracias Orly y equipo !!',
+            img: '/images/reviews/antonella.png',
+            name: 'Antonella',
+            review: 'Un servicio increíble, lo super recomiendo. Todas las chicas son muy amorosas y respetuosas, tanto con los michis como con los hogares. Cada viaje que hago me voy super tranquila y en cada foto y video que envían se nota el amor, la paciencia y la dedicación que les brindan y lo relajados que están. Una vez más, gracias por todo!',
             stars: 5,
         },
         {
             id: 2,
-            img: '',
-            name: 'Veronica Bartalini',
-            review: 'Para nosotros fue un descubrimiento hermoso. Una vez más dejamos a Cata con Kittysitter, Orly la trata amorosamente, le hace mimos, juegan, y se llevan muy bien. Cata se siente super cómoda con ella. Sabiendo esto, la dejamos seguros. Amor, cuidado y confianza¡ Gracias totales Orly',
+            img: '/images/reviews/pauli.png',
+            name: 'Pauli',
+            review: 'Contrato a KittySitter desde ya hace 2 años y estoy más que conforme, las volvería a elegir una y mil veces. Súper confiables, a mi bebé siempre lo encuentro muy tranquilo cuando regreso de viaje, a diferencia de cuando lo he dejado con otras personas. Las kittys son muy amorosas y juegan con el, anímense y prueben el servicio, a sus gatos les van a gustar mucho las niñeras!',
             stars: 5,
         },
         {
             id: 3,
-            img: '',
-            name: 'Victoria Pistelli',
-            review: 'Estuve ausente en mi casa por una semana y en ese tiempo la Kitty Agus me mantenía al tanto de todo enviándome fotos y videos de mis dos michis y contándome cómo estaban , cómo se comportaban y si les hacía falta algo. Pude irme de viaje tranquila, sabiendo que quedaban en muy buenas manos. Fue súper responsable y cariñosa con ellos en todo momento. Esta es la primera vez que contrato este servicio y quedé muy satisfecha, no voy a dudar en volver a contratar Kittysitter en un futuro.',
+            img: '/images/reviews/erika.png',
+            name: 'Erika',
+            review: 'Excelente servicio, hace 3 años que las elijo para cuidar a mi gatito y siempre quedo re contenta! Durante los días que quedan a cargo respetan los tiempos y el humor de los michis y estan muy atentas a sus necesidades y los cuidan perfecto, al llegar al domicilio envían ubicación, fotitos y los videos que hacen que te quedes súper tranquila. La responsabilidad y el amor que ponen en el cuidado se notan y son claves. Gracias Orly y equipo!',
             stars: 5,
         },
     ]
@@ -35,9 +35,10 @@ export default function Reviews() {
 
     return(
         <div className={`${reviewStyles.cards_container}`}>
-            {reviewsList.map(({ id, name, review, stars }) => (
+            {reviewsList.map(({ id, img, name, review, stars }) => (
                 <div className={`${reviewStyles.card}`} key={id}>
-                    <div className={`${reviewStyles.card_header}`} >
+                    <div className={`${reviewStyles.card_header} ${reviewStyles.center_h}`} >
+                        <Image className={`${reviewStyles.profile_pic}`} src={img} width={120} height={120} />
                         <h3 className={`${reviewStyles.title}`}>{name}</h3>
                     </div>
                     <div className={`${reviewStyles.card_body}`}>

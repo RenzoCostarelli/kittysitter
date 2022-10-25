@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import svgButtonStyles from '../../styles/SvgButton.module.scss'
 
 function openDialog(){
-    console.log('Open');
+    // console.log('Open');
 }
 
 

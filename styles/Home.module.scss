@@ -3,10 +3,11 @@
 .main_container {
     width: min(1200px, 90vw);
     height: 100%;
-    // padding-block: 10rem;
+    
     margin: 0 auto;
 
     position: relative;
+
 }
 
 .main{
@@ -184,7 +185,7 @@
 
 .section_basic{
     // height: 100vh;
-    padding-block: 2rem;
+    // padding-block: 2rem;
     position: relative;
     .section_title{
         font-size: 5.5vw;
@@ -477,6 +478,27 @@
 }
 
 
+.button_container{
+    .external_link{
+        color: $clr-neutral-100;
+        text-decoration: none;
+        font-weight: bold;
+
+        padding: 1rem 2rem;
+
+        border-radius: 2rem;
+        box-shadow: 0px 0px 0px 3px white;
+
+        transition: box-shadow 200ms linear;
+        &:hover{
+            box-shadow: 5px 0px 0px 3px white;
+        }
+    }
+}
+
+
+
+
 // design
 
 .deco_circle {
@@ -518,6 +540,13 @@
 
 }
 
+.pattern_decoration_white_dots{
+    background-image: radial-gradient($clr-neutral-100 2px, transparent 2px), radial-gradient($clr-neutral-100 2px, transparent 2px);
+    background-size: 36px 36px;
+    background-position: 0 0, 18px 18px;
+    background-color: rgba(71, 212, 255, 0);
+}
+
 .pattern_decoration_dots_small{
 
     opacity: .5;
@@ -525,6 +554,30 @@
     background-size: 32px 32px;
     background-position: 0 0, 16px 16px;
     background-color: rgba(71, 212, 255, 0);
+}
+
+.pattern_reviews_section_container{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -1%;
+    top: 2%;
+    z-index: -1;
+    
+    opacity: .5;
+
+}
+
+.pattern_container_bottom_right{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -1%;
+    bottom: 2%;
+    z-index: -1;
+    
+    opacity: .5;
+
 }
 
 // divider
@@ -548,7 +601,7 @@
     
 }
 
-.top_divider {
+.custom_divider_waves_opacity{
     position: absolute;
     top: 0;
     left: 0;
@@ -558,10 +611,42 @@
     svg {
         position: relative;
         display: block;
-        width: calc(100% + 1.3px);
-        height: 47px;
-        fill: #FFFFFF;
+        width: calc(139% + 1.3px);
+        height: 59px;
+        fill: #e9b5b5;
+    }
+    
+}
 
+.top_divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+        position: relative;
+        display: block;
+        width: calc(117% + 1.3px);
+        height: 38px;
+        fill: $clr-primary-400
+    }
+}
+
+.footer{
+    padding-block: 2rem;
+
+    .social_links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .logo_footer{
+        width: 300px;
     }
 }
 

@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+
+import Image from 'next/image'
 import Navstyles from '../../styles/Navbar.module.scss'
 
 import { gsap } from "gsap";
@@ -41,10 +43,17 @@ export default function Navbar() {
 
             </div>
             <div className={`${Navstyles.title_area}`}>
-                <h1>KITTY SITTER</h1>
+                {/* <h1>KITTY SITTER</h1> */}
+                <div className={`${Navstyles.logo}`}>
+                  <Image src="/images/kittysitter_logo_nav.png" width={726} height={243} />
+                </div>
             </div>
             <div className={`${Navstyles.cta_area}`}>
-                    <button>Agendá tu visita</button>
+                    <button className={`${Navstyles.main_button}`}>Agendá tu visita</button>
+                    {/* Abrir modal */}
+                    <button className={`${Navstyles.secondary_button}`}>Ser una Kitty</button>
+                    {/* https://docs.google.com/forms/d/1ewLKJZfqE_XkUHjG7Uk45901o3fO94Dv_Ipx6G2uMxE/viewform?edit_requested=true */}
+
             </div>
 
         </div>

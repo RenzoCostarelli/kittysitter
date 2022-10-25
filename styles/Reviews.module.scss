@@ -8,15 +8,21 @@
     align-items: flex-start;
     justify-content: center;
 
-    // margin-bottom: 15rem;
+    margin-block: 2rem;
 
     .card{
         
-        background-color: white;
+        background: rgb(232,166,166);
+        background: linear-gradient(72deg, rgba(232,166,166,1) 0%, rgba(194,212,236,1) 100%);
         flex-basis: 350px;
         border-radius: 1rem;
         padding: 2rem 1rem;
         
+        position: relative;
+
+        
+        z-index: 0;
+
         .card_header{
             .title{
                 text-align: center;
@@ -28,6 +34,16 @@
         .card_body{
             padding: 1rem;
         }
+        &::after{
+            content: '';
+            background-color: white;
+            position: absolute;
+            border-radius: 0.8rem;
+            inset: 0;
+
+            z-index: -1;
+        }
+
     }
 }
 
