@@ -65,7 +65,7 @@ export default function GalleryScroller() {
         <div className={`${stylesGalleryScroller.wrapper_overflow_hidden} ${stylesGalleryScroller.scroll_gallery}`} ref={el => {hGalleryRef = el}}>
                 {galleryData.map(({ src }) => (
                 <div className={stylesGalleryScroller.gallery_item} key={src}>
-                  <Image src={src} width={1000} height={1000} />
+                  <Image src={src} width={1000} height={1000} alt='kittysitter.com.ar'/>
                 </div>
                 ))}
         </div>

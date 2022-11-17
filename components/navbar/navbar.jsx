@@ -17,7 +17,7 @@ export default function Navbar() {
         if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
           setShow(true); 
         } else { // if scroll up show the navbar
-          setShow(false);  
+          setShow(true);  
         }
   
         // remember current page location to use in the next move
@@ -38,16 +38,14 @@ export default function Navbar() {
     }, [lastScrollY]);
     return (
         <div className={`${Navstyles.navBar} ${Navstyles.bg_neutral_100} ${show && Navstyles.visible}`}>
-            <div className={`${Navstyles.svg_container}`}>
-
-
-            </div>
+            <div className={`${Navstyles.flex_spacer}`}></div>
             <div className={`${Navstyles.title_area}`}>
                 {/* <h1>KITTY SITTER</h1> */}
                 <div className={`${Navstyles.logo}`}>
-                  <Image src="/images/kittysitter_logo_nav.png" width={726} height={243} />
+                  <Image src="/images/kittysitter_logo_nav.png" objectFit='contain' fill/>
                 </div>
             </div>
+            
             <div className={`${Navstyles.cta_area}`}>
                     <button className={`${Navstyles.main_button}`}>Agendá tu visita</button>
                     {/* Abrir modal */}

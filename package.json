@@ -11,14 +11,15 @@
   "dependencies": {
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.117",
+    "@studio-freight/lenis": "^0.2.22",
     "gsap": "^3.11.3",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.55.0"
   },
   "devDependencies": {
     "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
+    "eslint-config-next": "^13.0.1"
   }
 }

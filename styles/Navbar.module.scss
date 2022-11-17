@@ -34,17 +34,29 @@
 
 .title_area{
     font-weight: bold;
-    margin-left: auto;
     display: flex;    
     align-items: center;
     gap: 1rem;
 }
 
 .logo{
-    width: 100px;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 40px;
 }
 .cta_area{
     margin-left: auto;
+    display: flex;
+    gap: 1rem;
+
+    .main_button{
+        border: none;
+        background: none;
+        font-weight: bold;
+        color: $clr-primary-400;
+        cursor: pointer;
+    }
 }
 
 

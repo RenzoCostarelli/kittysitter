@@ -8,7 +8,7 @@
     align-items: flex-start;
     justify-content: center;
 
-    margin-block: 2rem;
+    margin-block: 3rem;
 
     .card{
         
@@ -24,6 +24,9 @@
         z-index: 0;
 
         .card_header{
+            img {
+                margin: 0 auto;
+            }
             .title{
                 text-align: center;
                 font-weight: 400;

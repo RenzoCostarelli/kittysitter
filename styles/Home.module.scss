@@ -95,6 +95,7 @@
         width: max-content;
         overflow: hidden;
         transform: translateX(-5px); // y bueno
+        filter: drop-shadow(4px 4px 0px #00000050);
         .char{
             display: inline-block;
 
@@ -184,13 +185,22 @@
 }
 
 .section_basic{
-    // height: 100vh;
-    // padding-block: 2rem;
+
     position: relative;
+    
     .section_title{
+        
+        line-height: 1;
         font-size: 5.5vw;
         font-weight: bold;
-        // color: $clr-primary-400;
+        
+
+    }
+
+    .section_title_small {
+        line-height: 1;
+        font-size: 3.5vw;
+        font-weight: bold;
     }
 
 }
@@ -268,6 +278,12 @@
         height: 300px;
         aspect-ratio: 1 / 1;
         background-color: gray;
+        position: relative;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
 
     }
 }
@@ -418,12 +434,14 @@
 
 .image_container{
     width: min(500px, 90vw);
+    height: 600px;
     padding: 1rem;
     position: relative;
     // filter: drop-shadow(-2px 14px 0px $clr-primary-400);
 
     img {
         filter: drop-shadow(-10px 10px $clr-primary-400); 
+        object-fit: contain;
     }
 
     &.hidden_cat{
@@ -647,6 +665,13 @@
 
     .logo_footer{
         width: 300px;
+        // height: 200px;
+        overflow: hidden;
+        position: relative;
+        img{
+            object-fit: contain;
+            height: auto;
+        }
     }
 }
 

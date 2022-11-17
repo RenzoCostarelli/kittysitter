@@ -1,0 +1,11 @@
+@import 'variables';
+
+.news_link{
+    width: 200px;
+    height: 100px;
+    position: relative;
+    img{
+        object-fit: contain;
+        // width: auto;
+    }
+}

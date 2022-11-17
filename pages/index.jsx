@@ -10,16 +10,19 @@ import Navbar from '../components/navbar/navbar'
 import TextScroller from '../components/text-scroller/text_scroller'
 import GalleryScroller from '../components/gallery-scroller/gallery_scroller'
 import MainCtaButton from '../components/main-cta-button/mainCtaButton'
+import SocialNetworkLinks from '../components/social-network-links/social-network-links'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Reviews from '../components/reviews/reviews'
+import Medios from '../components/news/news'
 
 const Spline = React.lazy(() => import('@splinetool/react-spline'))
 
 
 export default function Home() {
 
+  
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -62,14 +65,13 @@ export default function Home() {
             <div className={styles.main_container}>
 
                 <div className={styles.hero_box}>
-                  <h1 className={`${styles.title} ${styles.text_neutral_900}`} ref={el => {titleRef = el}}>
+                  <h1 className={`${styles.title} ${styles.text_accent_100}`} ref={el => {titleRef = el}}>
                     <div className={`${styles.char}`}>K</div>
                     <div className={`${styles.char}`}>i</div>
                     <div className={`${styles.char}`}>t</div>
                     <div className={`${styles.char}`}>t</div>
                     <div className={`${styles.char}`}>y</div>
-                    <div className={`${styles.char}`}>&nbsp;</div>
-                    <div className={`${styles.char}`}>S</div>
+                    <div className={`${styles.char}`}>s</div>
                     <div className={`${styles.char}`}>i</div>
                     <div className={`${styles.char}`}>t</div>
                     <div className={`${styles.char}`}>t</div>
@@ -123,7 +125,11 @@ export default function Home() {
             
             <div className={styles.wrapper}>
             <div className={`${styles.image_container} ${styles.flex_basis_0 }`}>
-              <Image className={`${styles.image_fullH}`} src="/images/Kitty-1.png" width={999} height={1133} />
+              <Image  src="/images/Kitty-1.png" 
+                      fill 
+                      sizes="999px" 
+                      alt="Kittysitter Rosario"
+              />
             </div>
               <div className={`${styles.info_container} ${styles.flex_basis_0 } ${styles.right}`}>
                 <h1 className={``}>¿Cómo funciona?</h1>
@@ -161,7 +167,11 @@ export default function Home() {
                 <div className={`${styles.pattern_decoration_dots} ${styles.deco_box}`}></div>
               </div>
               <div className={`${styles.image_container} ${styles.flex_basis_0 }`}>
-                <Image className={`${styles.image_fullH}`} src="/images/Kitty-2.png" width={999} height={1133} />
+                <Image  src="/images/Kitty-2.png" 
+                        fill 
+                        sizes="999px" 
+                        alt="Kittysitter Rosario"
+                />
               </div>
             </div>
           </div>
@@ -181,55 +191,68 @@ export default function Home() {
         </section>
 
 
-        <section className={`${styles.section_basic} ${styles.linear_gradient_background} ${styles.vh_100} ${styles.pb_6} ${styles.flex_align_center}`}>
+        <section className={`${styles.section_basic} 
+                            ${styles.linear_gradient_background} 
+                            ${styles.vh_100} 
+                            ${styles.pb_6} 
+                            ${styles.flex_align_center}`}
+                            >
+            
             <div className={`${styles.main_container} ${styles.z_index_0}`}> 
+                {/* deco */}
                 <div className={`${styles.pattern_reviews_section_container} ${styles.pattern_decoration_white_dots}`}></div> 
                 <div className={`${styles.pattern_container_bottom_right} ${styles.pattern_decoration_white_dots}`}></div> 
+                {/* deco */}
+                
+                <h1 className={`${styles.section_title} ${styles.text_center} ${styles.text_accent_100}  ${styles.drop_shadow_100}`}>Reseñas</h1>
             
-            
-                <h1 className={`${styles.section_title} ${styles.text_center} ${styles.text_neutral_900}`}>Reseñas</h1>
                 <Reviews/>
-                <div className={`${styles.button_container} ${styles.center_h}`}>
-                  <a href="https://www.google.com/search?q=kitty+sitter&rlz=1C1UEAD_esAR980AR980&oq=kitty+sitter&aqs=chrome.0.69i59l2j0i512j0i22i30j0i22i30i457j69i60l2j69i61.1862j0j7&sourceid=chrome&ie=UTF-8#lrd=0x95b7ad7b2ccae8c7:0xa880c6f294a764a9,1,,," className={`${BtnStyles.main_cta_offset}`} target='_blank'>Todas las reseñas</a>
-               
-
-                </div>
+            
+                <div className={`${styles.button_container} ${styles.text_center}`}>
+                  
+                  <a href="https://www.google.com/search?q=kitty+sitter&rlz=1C1UEAD_esAR980AR980&oq=kitty+sitter&aqs=chrome.0.69i59l2j0i512j0i22i30j0i22i30i457j69i60l2j69i61.1862j0j7&sourceid=chrome&ie=UTF-8#lrd=0x95b7ad7b2ccae8c7:0xa880c6f294a764a9,1,,," className={`${BtnStyles.main_cta_offset}`} target='_blank' data-text="Todas las reseñas">Todas las reseñas</a>
+               </div>
 
             </div>
 
 
         </section>
         <section className={`${styles.section_basic} `}>
+
             <div className={`${styles.custom_divider_waves_opacity}`}>
               <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                   <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
               </svg>
+            </div>
+            <div className={`${styles.main_container} ${styles.pb_4}`}> 
+              
+              <h1 className={`${styles.section_title_small} ${styles.text_center} ${styles.text_neutral_900}  ${styles.drop_shadow_100}`}>Nos viste en:</h1>
+              <Medios />
             </div>
         </section>
 
       </main>
 
       <footer className={styles.footer}>
+
         <div className={`${styles.wrapper} ${styles.flex_column}`}>
           <div className={`${styles.logo_footer}`}>
-              <Image src="/images/kittysitter_logo_nav.png" width={726} height={243} />
+              <Image src="/images/kittysitter_logo_nav.png" width={726} height={243} alt='kittysitter footer logo'/>
 
           </div>
           <div className={`${styles.social_links} ${styles.gap_1}`}>
-            <div className="icon">Facebook</div>
-            <div className="icon">Instagram</div>
-            <div className="icon">Wsp</div>
+            <SocialNetworkLinks/>
 
           </div>
-            <div className="footer_cta_container">
-
-            </div>
+ 
             <div className="footer_bottom_section">
 
             </div>
         </div>
-        {/* LOGO */}
-        {/* REDES */}
+
+
+      
+    
         {/* CTA FORM */}
         {/* CTA DOC */}
         {/* LINK A MI WEB */}

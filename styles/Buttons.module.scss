@@ -3,7 +3,7 @@
 .main_cta_offset {
     background: transparent;
     box-shadow: 0 0 0 1px $clr-neutral-100;
-    color: $clr-primary-400;    
+    color: transparent;    
 
     padding: .5rem 2.5rem;
         
@@ -17,22 +17,32 @@
     width: max-content;
 
     cursor: pointer;
-
+    &::before{
+        content: attr(data-text);
+        position: absolute;
+        color: $clr-primary-400;
+        transform: translate(5px, 5px);        
+        transition: transform 200ms linear;
+        
+    }
     &::after{
         content: '';
         position: absolute;
         background-color: white;
+
         width: 100%;
         height: 100%;
         inset: 0;
+
         z-index: -1;
-        transform: translate(-5px, 5px);
-      /*   border-radius: 10px; */
-        
+
+        transform: translate(5px, 5px);        
         transition: transform 200ms linear;
     }
 
+
     &:hover{
+        &::before,
         &::after{
             transform: translate(0px, 0px);
         } 
